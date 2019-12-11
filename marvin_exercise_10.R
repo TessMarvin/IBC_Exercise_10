@@ -33,7 +33,7 @@ tumorpopulation <- function(N0=2, r0=0.1,knum=1000000)
   {
     mpopnum <- mpop[length(mpop)] + (mutr)*(mpop[length(mpop)])*(1-((nmpop[length(nmpop)]+mpop[length(mpop)])/knum))
     nmpopnum <- nmpop[length(nmpop)] + (nonmutr)*(nmpop[length(nmpop)])*(1-((nmpop[length(nmpop)]+mpop[length(mpop)])/knum))
-    print(nmpopnum)
+    ##print(nmpopnum)
     nmpop <- c(nmpop, nmpopnum)
     mpop <- c(mpop, mpopnum)
   }
@@ -52,3 +52,4 @@ a = ggplot() +
   ylab("Tumor Population") +
   theme_classic()
 a
+
